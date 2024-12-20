@@ -35,7 +35,7 @@ public class ArrayList4<E> implements List4<E>{
 
   @Override
   public void update(int index, E e) {
-
+     data[index] =e;
   }
 
   @Override
