@@ -11,6 +11,12 @@ public class Main {
         l2.add(3);
         l2.add(4);
 
+        l2.insert(1,7);
+
+        for(int i =0;i<l2.length();i++){
+            System.out.print(l2.getValue(i) + " ");
+        }
+
         ArrayList<Integer> l3 = new ArrayList<>(3);
 
     }

@@ -10,10 +10,6 @@ public class ArrayList4<E> implements List4<E>{
     size = 0;
   }
 
-  public E [] getData(){
-     return data;
-  }
-
   @Override
   public int length() {
     return size;
@@ -29,7 +25,12 @@ public class ArrayList4<E> implements List4<E>{
 
   @Override
   public void insert(int index, E e) {
-
+    if(size == data.length)
+      makeDouble();
+    for(int i =size; i>index; i--)
+      data[i] = data[i-1];
+    data[index] = e;
+    size++;
   }
 
   @Override
@@ -50,7 +51,7 @@ public class ArrayList4<E> implements List4<E>{
 
   @Override
   public E getValue(int index) {
-    return null;
+    return data[index];
   }
 
   private void makeDouble(){
