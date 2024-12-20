@@ -22,6 +22,10 @@ public class Main {
         List4<Integer> l3 = new LinkedList3<>();
         l3.add(1);
         l3.add(2);
+        l3.add(3);
+        l3.add(4);
+        l3.insert(0,5);
+        l3.insert(2,7);
 
         for(int i =0;i<l3.length();i++){
             System.out.print(l3.getValue(i) + " ");

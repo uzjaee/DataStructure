@@ -25,8 +25,17 @@ public class LinkedList3 <E> implements List4<E>{
 
   @Override
   public void insert(int index, E e) {
+    Link3<E> item = new Link3<>(e,null);
+    Link3<E> curr = head;
+    for(int i = 0;i<index; i++)
+      curr = curr.next;
+    item.next = curr.next;
+    curr.next = item;
+    size++;
 
   }
+
+
 
   @Override
   public void update(int index, E e) {
