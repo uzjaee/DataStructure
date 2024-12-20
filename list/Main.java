@@ -12,6 +12,8 @@ public class Main {
         l2.add(4);
 
         l2.insert(1,7);
+        l2.update(2,4);
+        l2.remove(3);
 
         for(int i =0;i<l2.length();i++){
             System.out.print(l2.getValue(i) + " ");

@@ -19,8 +19,7 @@ public class ArrayList4<E> implements List4<E>{
   public void add(E e) {
     if(size == data.length)
       makeDouble();
-    data[size] = e;
-    size++;
+    data[size++] = e;
   }
 
   @Override
@@ -46,7 +45,11 @@ public class ArrayList4<E> implements List4<E>{
 
   @Override
   public E remove(int index) {
-    return null;
+     E result = data[index];
+     for(int i = index; i < size; i++)
+       data[i] = data[i+1];
+     size--;
+    return result;
   }
 
   @Override
