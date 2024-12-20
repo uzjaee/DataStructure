@@ -5,21 +5,27 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList4<Integer> l2 = new ArrayList4<>(3);
-        l2.add(1);
-        l2.add(2);
-        l2.add(3);
-        l2.add(4);
+//        ArrayList4<Integer> l2 = new ArrayList4<>(3);
+//        l2.add(1);
+//        l2.add(2);
+//        l2.add(3);
+//        l2.add(4);
+//
+//        l2.insert(1,7);
+//        l2.update(2,4);
+//        l2.remove(3);
+//
+//        for(int i =0;i<l2.length();i++){
+//            System.out.print(l2.getValue(i) + " ");
+//        }
 
-        l2.insert(1,7);
-        l2.update(2,4);
-        l2.remove(3);
+        List4<Integer> l3 = new LinkedList3<>();
+        l3.add(1);
+        l3.add(2);
 
-        for(int i =0;i<l2.length();i++){
-            System.out.print(l2.getValue(i) + " ");
+        for(int i =0;i<l3.length();i++){
+            System.out.print(l3.getValue(i) + " ");
         }
-
-        ArrayList<Integer> l3 = new ArrayList<>(3);
 
     }
 
