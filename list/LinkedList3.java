@@ -39,7 +39,10 @@ public class LinkedList3 <E> implements List4<E>{
 
   @Override
   public void update(int index, E e) {
-
+    Link3<E> curr = head;
+    for(int i = 0;i<=index;i++)
+      curr = curr.next;
+    curr.item = e;
   }
 
   @Override
