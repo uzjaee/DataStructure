@@ -47,12 +47,20 @@ public class LinkedList3 <E> implements List4<E>{
 
   @Override
   public void clear() {
-
+    tail = head;
+    size = 0;
+    head.next =null;
   }
 
   @Override
   public E remove(int index) {
-    return null;
+    Link3<E> curr = head;
+    for(int i = 0; i<index; i++)
+      curr = curr.next;
+    E removed = curr.next.item;
+    curr.next = curr.next.next;
+    size--;
+    return removed;
   }
 
   @Override

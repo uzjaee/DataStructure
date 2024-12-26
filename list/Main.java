@@ -27,6 +27,8 @@ public class Main {
         l3.insert(0,5);
         l3.insert(2,7);
         l3.update(1,7);
+        l3.remove(4);
+
 
         for(int i =0;i<l3.length();i++){
             System.out.print(l3.getValue(i) + " ");
