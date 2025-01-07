@@ -4,3 +4,4 @@
 ### LinkedList 
 ### iterator
 ### dobule LinkedList
+### stack 
