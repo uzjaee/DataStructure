@@ -1,39 +1,45 @@
 package list;
 
-import java.util.ArrayList;
+
 
 public class Main {
 
     public static void main(String[] args) {
-//        ArrayList4<Integer> l2 = new ArrayList4<>(3);
-//        l2.add(1);
-//        l2.add(2);
-//        l2.add(3);
-//        l2.add(4);
-//
-//        l2.insert(1,7);
-//        l2.update(2,4);
-//        l2.remove(3);
-//
-//        for(int i =0;i<l2.length();i++){
-//            System.out.print(l2.getValue(i) + " ");
-//        }
+        Arraylist<Integer> l2 = new Arraylist<>(7);
+        l2.append(1);
+        l2.append(2);
+        l2.append(3);
+        l2.append(4);
 
-        List4<Integer> l3 = new LinkedList3<>();
-        l3.add(1);
-        l3.add(2);
-        l3.add(3);
-        l3.add(4);
-        l3.insert(0,5);
-        l3.insert(2,7);
-        l3.update(1,7);
-        l3.remove(4);
+        l2.insert(1,7);
+        l2.update(2,4);
+        l2.remove(3);
 
-
-        for(int i =0;i<l3.length();i++){
-            System.out.print(l3.getValue(i) + " ");
+        for(int i =0;i<l2.length();i++){
+            System.out.print(l2.getValue(i) + " ");
+        }
+        System.out.println(" ");
+        ListIterator<Integer> it = l2.listIterator();
+        while(it.hasNext()){
+            System.out.print(it.next() + " ");
         }
 
+
+//        List4<Integer> l3 = new LinkedList3<>();
+//        l3.add(1);
+//        l3.add(2);
+//        l3.add(3);
+//        l3.add(4);
+//        l3.insert(0,5);
+//        l3.insert(2,7);
+//        l3.update(1,7);
+//        l3.remove(4);
+//
+//
+//        for(int i =0;i<l3.length();i++){
+//            System.out.print(l3.getValue(i) + " ");
+//        }
+//
     }
 
 }

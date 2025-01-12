@@ -1,5 +1,6 @@
 package list;
 
+
 public class Arraylist <E> implements List <E> {
 	
 	int listSize;
@@ -56,5 +57,36 @@ public class Arraylist <E> implements List <E> {
 		}
 		listSize--;
 	}
-	
+
+	@Override
+	public ListIterator<E> listIterator() {
+		return new ListIterator<E>() {
+			int curr = 0;
+
+			@Override
+			public boolean hasNext() {
+				return curr < listSize;
+			}
+
+			@Override
+			public E next() {
+				// 현재 값을 집어넣는 형태
+
+				return data[curr++];
+			}
+
+			@Override
+			public boolean hasPrevious() {
+				return curr > 0;
+			}
+
+			@Override
+			public E previous() {
+				return data[--curr];
+			}
+
+
+		};
+	}
+
 }
