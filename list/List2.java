@@ -7,5 +7,6 @@ public interface List2<E> {
     public E getValue(int pos);
     public void clear();
     public int length();
-
+    public void update(int pos, E item);
+    public ListIterator2<E> listIterator();
 }

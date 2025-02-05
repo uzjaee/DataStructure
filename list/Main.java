@@ -1,11 +1,12 @@
 package list;
 
 
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        Arraylist<Integer> l2 = new Arraylist<>(7);
+        ArrayList2<Integer> l2 = new ArrayList2<>(7);
         l2.append(1);
         l2.append(2);
         l2.append(3);
@@ -19,7 +20,7 @@ public class Main {
             System.out.print(l2.getValue(i) + " ");
         }
         System.out.println(" ");
-        ListIterator<Integer> it = l2.listIterator();
+        ListIterator2<Integer> it = l2.listIterator();
         while(it.hasNext()){
             System.out.print(it.next() + " ");
         }

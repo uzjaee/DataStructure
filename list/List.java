@@ -1,5 +1,6 @@
 package list;
 
+
 public interface List <E>{
 	public void clear();
 	public void insert(int pos, E item);
@@ -8,5 +9,6 @@ public interface List <E>{
 	public E getValue(int pos);
 	public int length();
 	public void remove(int pos);
+	public ListIterator<E> listIterator();
 
 }

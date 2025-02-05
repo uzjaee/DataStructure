@@ -1,6 +1,8 @@
 package list;
 
-public class LinkedList<E> implements List<E> {
+import java.util.ListIterator;
+
+public class LinkedList<E> implements List2<E> {
 
     Link<E> head,tail;
     int size;
@@ -47,6 +49,11 @@ public class LinkedList<E> implements List<E> {
     }
 
     @Override
+    public ListIterator2<E> listIterator() {
+        return null;
+    }
+
+    @Override
     public E getValue(int pos) {
         Link<E>curr = head;
         for(int i=0;i<=pos;i++){
@@ -71,4 +78,7 @@ public class LinkedList<E> implements List<E> {
         size--;
 
     }
+
+
+
 }
