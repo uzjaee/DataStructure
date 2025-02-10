@@ -1,8 +1,6 @@
 package list;
 
-import java.util.ListIterator;
-
-public class LinkedList<E> implements List2<E> {
+public class LinkedList<E> implements List<E> {
 
     Link<E> head,tail;
     int size;
@@ -49,8 +47,34 @@ public class LinkedList<E> implements List2<E> {
     }
 
     @Override
-    public ListIterator2<E> listIterator() {
-        return null;
+    public ListIterator<E> listIterator() {
+        return new ListIterator<E>() {
+           Link<E> curr = head;
+            @Override
+            public boolean hasNext() {
+                return curr != tail;
+            }
+
+            @Override
+            public E next() {
+                curr = curr.next;
+                return curr.item;
+            }
+
+            @Override
+            public boolean hasPrevious() {
+                return curr != head;
+            }
+
+            @Override
+            public E previous() {
+                Link<E> prev = head;
+                while(prev.next != curr)
+                    prev = prev.next;
+                curr = prev;
+                return curr.next.item;
+            }
+        };
     }
 
     @Override
