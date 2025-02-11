@@ -52,6 +52,13 @@ public class DLinkedList <E> implements List<E> {
 
   @Override
   public void remove(int pos) {
+    DLink<E> curr = head;
+    for(int i =0;i<pos;i++){
+      curr = curr.next;
+    }
+    curr.prev.next = curr.next;
+    curr.next.prev = curr.prev;
+    size--;
 
   }
 
