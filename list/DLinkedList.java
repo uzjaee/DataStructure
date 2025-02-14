@@ -76,7 +76,30 @@ public class DLinkedList <E> implements List<E> {
 
   @Override
   public ListIterator<E> listIterator() {
-    return null;
+    return new ListIterator<E>() {
+      DLink<E> pos = head;
+      @Override
+      public boolean hasNext() {
+        return  pos.next != tail;
+      }
+
+      @Override
+      public E next() {
+        pos = pos.next;
+        return pos.item;
+      }
+
+      @Override
+      public boolean hasPrevious() {
+        return pos.prev != head;
+      }
+
+      @Override
+      public E previous() {
+        pos = pos.prev;
+        return pos.next.item;
+      }
+    };
   }
 
 }
