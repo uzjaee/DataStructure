@@ -32,9 +32,8 @@ public class DLinkedList <E> implements List<E> {
 
   @Override
   public void append(E item) {
-    DLink<E> it = new DLink<>(item,null,null);
-    it.prev = tail.prev;
-    it.next = tail;
+    DLink<E> it = new DLink<>(item,tail.prev,tail);
+    tail.prev.next =it;
     tail.prev = it;
     size++;
   }
@@ -51,7 +50,7 @@ public class DLinkedList <E> implements List<E> {
   @Override
   public E getValue(int pos) {
     DLink<E> curr = head;
-    for(int i =0;i<pos;i++){
+    for(int i =0;i<=pos;i++){
       curr = curr.next;
     }
     return curr.item;

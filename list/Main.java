@@ -6,21 +6,21 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList2<Integer> l2 = new ArrayList2<>(7);
+        DLinkedList<Integer> l2 = new DLinkedList<>();
         l2.append(1);
         l2.append(2);
         l2.append(3);
         l2.append(4);
 
-        l2.insert(1,7);
-        l2.update(2,4);
-        l2.remove(3);
+//        l2.insert(1,7);
+//        l2.update(2,4);
+//        l2.remove(3);
 
         for(int i =0;i<l2.length();i++){
             System.out.print(l2.getValue(i) + " ");
         }
         System.out.println(" ");
-        ListIterator2<Integer> it = l2.listIterator();
+        ListIterator<Integer> it = l2.listIterator();
         while(it.hasNext()){
             System.out.print(it.next() + " ");
         }
