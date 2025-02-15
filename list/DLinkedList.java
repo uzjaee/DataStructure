@@ -32,11 +32,11 @@ public class DLinkedList <E> implements List<E> {
 
   @Override
   public void append(E item) {
-    DLink<E> curr = head;
-    for(int i =0;i<size;i++){
-      curr = curr.next;
-    }
-    curr.next = new DLink<>(item,curr,curr.next);
+    DLink<E> it = new DLink<>(item,null,null);
+    it.prev = tail.prev;
+    it.next = tail;
+    tail.prev = it;
+    size++;
   }
 
   @Override
